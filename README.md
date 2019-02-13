@@ -39,3 +39,9 @@
 So we get a pth file object-detect.pth file now we are ready to test our model
 
     python predict.py    
+    
+    
+    
+#### None issue
+
+There are no object-detect.pth file. so we need to train and save the file.    
