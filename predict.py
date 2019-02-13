@@ -201,21 +201,23 @@ def image_show(img_path,probabilities,classes, mapper):
     plt.title(cat_to_name[classes[0]])
     plt.show()
 #multiple_predict(loaded_model)
-img1 = 'data/test/1/image_00007.jpg'
-img2 = 'data/test/1/image_00004.jpg'
-img3 = 'data/test/2/image_00018.jpg'
-img4 = 'data/test/2/image_00010.jpg'
-p, c = predict(img1, loaded_model)
-p2, c2 = predict(img2, loaded_model)
-p3, c3 = predict(img3, loaded_model)
-p4, c4 = predict(img4, loaded_model)
-image_show(img1, p, c, cat_to_name)
-image_show(img2, p2, c2, cat_to_name)
-image_show(img3, p3, c3, cat_to_name)
-image_show(img4, p4, c4, cat_to_name)
-multiple_predict()
+def main():
+    img1 = 'data/test/1/image_00007.jpg'
+    img2 = 'data/test/1/image_00004.jpg'
+    img3 = 'data/test/2/image_00018.jpg'
+    img4 = 'data/test/2/image_00010.jpg'
+    img5 = 'images.jpg'
+    p, c = predict(img1, loaded_model)
+    p2, c2 = predict(img2, loaded_model)
+    p3, c3 = predict(img3, loaded_model)
+    p4, c4 = predict(img4, loaded_model)
+    p5, c5 = predict(img5, loaded_model)
+    image_show(img1, p, c, cat_to_name)
+    image_show(img2, p2, c2, cat_to_name)
+    image_show(img3, p3, c3, cat_to_name)
+    image_show(img4, p4, c4, cat_to_name)
+    image_show(img5, p5, c5, cat_to_name)
+    multiple_predict()
 
-#view_classify(img1, p, c, cat_to_name)
-#print("I am here",p[0],c[0],cat_to_name[c[0]])
-#img=mpimg.imread('flower_data/image_01313.jpg')
-#imgplot = plt.imshow(img1)
+if __name__ == '__main__':
+    main()

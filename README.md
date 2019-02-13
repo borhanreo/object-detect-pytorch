@@ -1,10 +1,15 @@
 ## Pytorch train a model for object detection in an image
+### This model detect only 2 object bottle and car
 #### Step 1: Description
  
  - At first you need to decided how may object you need to detect. Here i used 2 object car and bottle
  - Object name write into a json 'cat_to_name.json' file    {"1":"bottle","2":"Car"} 
  - We need to arrange/collect train image. all image will be in data folder like this. data/train/1/images_00000.jpg here 1 for all bottle image and another data/train/2/images_00000.jpg car images  
-
+ - if you use google colab then open object_detect_pytorch.ipynb
+ - zip you data directory
+ - upload to colad file system
+ - unzip data folder
+ - upload json file cat_to_name.json 
 #### Step 2: Initialize
  
     #cat_to_name_file
