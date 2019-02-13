@@ -1,4 +1,6 @@
 import json
+from time import sleep
+
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
@@ -180,15 +182,38 @@ def view_classify(img, probabilities, classes, mapper):
 #img1 = 'flower_data/image_01313.jpg'
 img1 = 'images.jpg'
 #img1 = 'data/test/1/image_00007.jpg'
+def multiple_predict():
+    imgs = []
+    path = "data/test/1"
+    valid_images = [".jpg", ".gif", ".png", ".tga"]
+    for f in os.listdir(path):
+        ext = os.path.splitext(f)[1]
+        if ext.lower() not in valid_images:
+            continue
+        imgs.append(Image.open(os.path.join(path, f)))
+        image_path = path + "/" + f
+        print(image_path)
+        #p, c = predict(str(image_path), loaded_model)
+        #print(p,c)
 def image_show(img_path,probabilities,classes, mapper):
     img = mpimg.imread(img_path)
     imgplot = plt.imshow(img)
     plt.title(cat_to_name[classes[0]])
     plt.show()
-
+#multiple_predict(loaded_model)
+img1 = 'data/test/1/image_00007.jpg'
+img2 = 'data/test/1/image_00004.jpg'
+img3 = 'data/test/2/image_00018.jpg'
+img4 = 'data/test/2/image_00010.jpg'
 p, c = predict(img1, loaded_model)
+p2, c2 = predict(img2, loaded_model)
+p3, c3 = predict(img3, loaded_model)
+p4, c4 = predict(img4, loaded_model)
 image_show(img1, p, c, cat_to_name)
-
+image_show(img2, p2, c2, cat_to_name)
+image_show(img3, p3, c3, cat_to_name)
+image_show(img4, p4, c4, cat_to_name)
+multiple_predict()
 
 #view_classify(img1, p, c, cat_to_name)
 #print("I am here",p[0],c[0],cat_to_name[c[0]])
