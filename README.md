@@ -10,6 +10,7 @@
  - upload to colad file system
  - unzip data folder
  - upload json file cat_to_name.json 
+ - then run object_detect_pytorch.ipynb ste
 #### Step 2: Initialize
  
     #cat_to_name_file
