@@ -7,7 +7,7 @@
  - We need to arrange/collect train image. all image will be in data folder like this. data/train/1/images_00000.jpg here 1 for all bottle image and another data/train/2/images_00000.jpg car images  
  - if you use google colab then open object_detect_pytorch.ipynb
  - zip you data directory
- - upload to colad file system
+ - upload data.zip to colad file system
  - unzip data folder
  - upload json file cat_to_name.json 
  - then run object_detect_pytorch.ipynb ste
