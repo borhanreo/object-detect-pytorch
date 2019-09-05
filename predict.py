@@ -217,7 +217,7 @@ def main():
     image_show(img3, p3, c3, cat_to_name)
     image_show(img4, p4, c4, cat_to_name)
     image_show(img5, p5, c5, cat_to_name)
-    #multiple_predict()
+    multiple_predict()
 
 if __name__ == '__main__':
     main()
