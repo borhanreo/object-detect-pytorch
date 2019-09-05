@@ -41,7 +41,8 @@
                       'class_to_idx': model.class_to_idx,
                       'epoch': model.epochs}
     torch.save(checkpoint, 'object-detect.pth')    
-    
+### Train a new model 
+we need to open **object_detect_pytorch.ipynb**    
 So we get a pth file object-detect.pth file now we are ready to test our model
 
     python predict.py    
