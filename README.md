@@ -52,3 +52,7 @@ So we get a pth file object-detect.pth file now we are ready to test our model
 #### None issue
 
 There are no object-detect.pth file. so we need to train and save the file.    
+#### DATASET
+
+    !wget https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/lfw.zip
+    !wget https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip

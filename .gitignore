@@ -1,4 +1,5 @@
 .idea
 .idea/
 .idea*
-object-detect.pth
+object-detect.pth3
+data.zip
